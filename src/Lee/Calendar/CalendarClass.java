@@ -31,9 +31,9 @@ class CalendarClass {
 		 "22 23 24 25 26 27 28");
 			for (int i = 1; i <= cal2.getMaxDaysOfMonth(inputYear, inputMonth) - 28; i++) {
 				System.out.print(i + 28 + " ");
-		System.out.println();
+		
 }
-
+			System.out.println();
 
 }
 }

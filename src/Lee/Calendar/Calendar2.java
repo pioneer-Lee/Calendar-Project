@@ -17,13 +17,19 @@ public class Calendar2 {
 			if (1 <= inputMonth && inputMonth <= 12) {
 				if (cal2.getMaxDaysOfMonth(inputMonth) == 31) {
 					cal2.getCalendar(inputYear, inputMonth);
-				} else {
-					cal2.getCalendar(inputYear, inputMonth);
+				} 
+				else if (inputYear % 400 == 0 || (inputYear % 4 == 0 && inputYear % 100 !=0)) {
+						cal2.getLeapCalendar(inputYear, inputMonth);
 				}
-			} else if (inputMonth == -1) {
+				else {
+				cal2.getCalendar(inputYear, inputMonth);
+				}
+			} 
+			else if (inputMonth == -1) {
 				System.out.println("have a nice day~");
 				break;
-			} else {
+			} 
+			else {
 				System.out.println("월은 1 ~ 12만 입력 가능합니다 종료하고 싶으면 -1을 입력하세요");
 				System.out.println("년, 월을 입력하세요");
 			}

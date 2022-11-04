@@ -15,15 +15,7 @@ public class Calendar2 {
 			int inputMonth = scanner.nextInt();
 
 			if (1 <= inputMonth && inputMonth <= 12) {
-				if (cal2.getMaxDaysOfMonth(inputMonth) == 31) {
-					cal2.getCalendar(inputYear, inputMonth);
-				} 
-				else if (inputYear % 400 == 0 || (inputYear % 4 == 0 && inputYear % 100 !=0)) {
-						cal2.getLeapCalendar(inputYear, inputMonth);
-				}
-				else {
 				cal2.getCalendar(inputYear, inputMonth);
-				}
 			} 
 			else if (inputMonth == -1) {
 				System.out.println("have a nice day~");

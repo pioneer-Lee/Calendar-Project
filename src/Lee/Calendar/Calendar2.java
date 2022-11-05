@@ -8,14 +8,17 @@ public class Calendar2 {
 		Scanner scanner = new Scanner(System.in);
 		CalendarClass cal2 = new CalendarClass();
 
-		System.out.println("년, 월을 입력하세요");
 
 		while (true) {
+			System.out.println("연도를 입력하세요\nYear> ");
 			int inputYear = scanner.nextInt();
+			System.out.println("월을 입력하세요\nMonth> ");
 			int inputMonth = scanner.nextInt();
+			System.out.println("시작일 입력하세요\nSu Mo Tu We Th Fr Sa 중 택1> ");
+			String inputStartDate = scanner.next();
 
 			if (1 <= inputMonth && inputMonth <= 12) {
-				cal2.getCalendar(inputYear, inputMonth);
+				cal2.getCalendar(inputYear, inputMonth, inputStartDate);
 			} 
 			else if (inputMonth == -1) {
 				System.out.println("have a nice day~");
